@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Обратный отсчёт</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <h1>⏱ Обратный отсчёт</h1>
+
+  <div class="controls">
+    <label for="minutes-input">Минуты:</label>
+    <input type="number" id="minutes-input" min="1" max="99" value="5">
+
+    <button id="start-btn">▶ Старт</button>
+    <button id="reset-btn" disabled>⟲ Сброс</button>
+
+    <!-- Индикатор работы таймера -->
+    <span id="spinner" class="spinner"></span>
+  </div>
+ 
+  <div class="timer-container">
+    <svg viewBox="0 0 200 200">
+      <circle class="track" cx="100" cy="100" r="90"></circle>
+      <circle
+        id="progress-circle"
+        class="progress"
+        cx="100" cy="100" r="90"
+      ></circle>
+    </svg>
+   
+    <div id="time-display" class="time-display">00:00</div>
+  </div>
+
+  <div id="status" class="status">Введите минуты и нажмите «Старт»</div>
+
+  <script src="/index.js">
+  </script>
+
+</body>
+</html>
